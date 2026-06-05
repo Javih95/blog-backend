@@ -10,9 +10,7 @@ import {
 }  from'../controllers/postController.js';
 import { authenticateToken, requireAdmin } from '../middlewares/authMiddleware.js';
 
-router.post('/',authenticateToken, requireAdmin, async (req, res) => {
-  CrearPost(req, res);
-});
+router.post('/', CrearPost);
 
 router.get('/', TraerPosts);
 router.get('/destacados', TraerPostsDestacados);
