@@ -11,7 +11,6 @@ import {
 import { authenticateToken, requireAdmin } from '../middlewares/authMiddleware.js';
 
 router.post('/', CrearPost);
-
 router.get('/', TraerPosts);
 router.get('/destacados', TraerPostsDestacados);
 router.get('/:id', TraerPostPorId);
